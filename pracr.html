@@ -8,85 +8,58 @@
     <title>Document</title>
 
     <style>
-        .hello {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 200px;
-    width: 200px;
-    border: 2px solid black;
-    margin: auto;
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-.controls {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
+nav li {
+  display: inline-block;
+  position: relative;
 }
 
-button {
-    margin-left: 10px;
+nav li a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #333;
 }
 
-.bg {
-    background-color: green;
-    color: #fff;
+.my-dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
 }
 
-.bd {
-    border: 5px solid red;
+.my-dropdown-content li {
+  display: block;
 }
+
+.my-dropdown:hover .my-dropdown-content {
+  display: block;
+}
+
     </style>
 </head>
 <body>
-    
-    <div class="controls">
-        <button id="add">Add</button>
-        <button id="remove">Remove</button>
-        <button id="toggle">Toggle</button>
-        <button id="check">Check</button>
-        <button id="addAll">Add All</button>
-        <button id="removeAll">Remove All</button>
-    </div>
-
-    <div class="hello">
-        Hello World
-    </div>
-
-    <script>
-const hello = document.querySelector('.hello');
-const add = document.querySelector('#add');
-const remove = document.querySelector('#remove');
-const toggle = document.querySelector('#toggle');
-const check = document.querySelector('#check');
-const addAll = document.querySelector('#addAll');
-const removeAll = document.querySelector('#removeAll');
-
-
-// add.addEventListener('click', () => {
-//     hello.classList.add('bg');
-// })
-
-// remove.addEventListener('click', () => {
-//     hello.classList.remove('bg');
-// })
-
-toggle.addEventListener('click', () => {
-    hello.classList.toggle('bg');
-})
-
-check.addEventListener('click', () => {
-    hello.innerText = hello.classList.contains('bg');
-})
-
-
-addAll.addEventListener('click', () => {
-    hello.classList.add('bg', 'bd');
-})
-
-removeAll.addEventListener('click', () => {
-    hello.classList.remove('bg', 'bd', 'hello');
-})
-    </script>
+    <nav>
+        <ul>
+          <li class="nav-item"><a href="#">Home</a></li>
+          <li class="nav-item my-dropdown">
+            <a href="#">Products</a>
+            <ul class="my-dropdown-content">
+              <li><a href="#">Product 1</a></li>
+              <li><a href="#">Product 2</a></li>
+              <li><a href="#">Product 3</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a href="#">About Us</a></li>
+          <li class="nav-item"><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      
 </body>
 </html>
