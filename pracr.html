@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+
+    <style>
+        .hello {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    width: 200px;
+    border: 2px solid black;
+    margin: auto;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+button {
+    margin-left: 10px;
+}
+
+.bg {
+    background-color: green;
+    color: #fff;
+}
+
+.bd {
+    border: 5px solid red;
+}
+    </style>
+</head>
+<body>
+    
+    <div class="controls">
+        <button id="add">Add</button>
+        <button id="remove">Remove</button>
+        <button id="toggle">Toggle</button>
+        <button id="check">Check</button>
+        <button id="addAll">Add All</button>
+        <button id="removeAll">Remove All</button>
+    </div>
+
+    <div class="hello">
+        Hello World
+    </div>
+
+    <script>
+const hello = document.querySelector('.hello');
+const add = document.querySelector('#add');
+const remove = document.querySelector('#remove');
+const toggle = document.querySelector('#toggle');
+const check = document.querySelector('#check');
+const addAll = document.querySelector('#addAll');
+const removeAll = document.querySelector('#removeAll');
+
+
+// add.addEventListener('click', () => {
+//     hello.classList.add('bg');
+// })
+
+// remove.addEventListener('click', () => {
+//     hello.classList.remove('bg');
+// })
+
+toggle.addEventListener('click', () => {
+    hello.classList.toggle('bg');
+})
+
+check.addEventListener('click', () => {
+    hello.innerText = hello.classList.contains('bg');
+})
+
+
+addAll.addEventListener('click', () => {
+    hello.classList.add('bg', 'bd');
+})
+
+removeAll.addEventListener('click', () => {
+    hello.classList.remove('bg', 'bd', 'hello');
+})
+    </script>
+</body>
+</html>

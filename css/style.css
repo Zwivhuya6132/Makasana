@@ -1,0 +1,575 @@
+/* Defining a Default styles for the whole HTML document */
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size:16px ;
+    scroll-padding-top:2rem;
+    scroll-behavior:smooth;
+    text-decoration: none;
+}
+
+/* styling the header container */
+.header{
+    display: flex;
+    color: #317773;
+    background-color: #E2D1F9;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+/* Styling the Company name */
+.name{
+    font-size: 1.5em;
+}
+
+/* styling the logo container */
+.logo-container{
+    display: flex;
+    align-items: center;
+    flex: 1;
+
+
+}
+
+/* Styling the logo image */
+.logo{
+    width: 50px;
+    height: 50px;
+    border-radius:50% ;
+}
+
+.r-sec{
+    /* background-color: aqua; */
+    display: flex;
+    flex: 0.5;
+    min-width: 350px;
+    min-height: 40px;
+    /* padding: 10px; */
+    justify-content: space-around;
+}
+
+/* Styling the menu section/ Right section */
+.menu-section{
+    display: none;
+    justify-content: space-between;
+    /* width: 20%; */
+}
+
+/* Styling the my account and cart button */
+.menu-button, .my-account, .Cart-button{
+    display: flex;
+    position: relative;
+    align-items: center;
+    border-radius: 25px;
+    cursor: pointer;
+    color: #E2D1F9;
+    overflow: hidden;
+    padding:5px 15px;
+    background: linear-gradient(to right, #5d9e9b, #317773);
+}
+
+.have ul{
+    list-style-type: none;
+}
+
+
+/* styling how the offcanvas appear when the is on "on" class*/
+.offcanvas-account.on,
+.offcanvas-cart.on,
+.offcanvas-Menu.on{
+    transform: translateY(0);
+}
+
+/* creating an offcanvas  */
+.offcanvas-account,
+.offcanvas-Menu{
+    position: fixed;
+    background: #E2D1F9;
+    width: 27%;
+    bottom: 0;
+    top: 0px;
+    right: 0;
+    z-index: 1000;
+    transform: translateX(100%);
+    transition: all .4s ease;
+    padding: 20px 10.5px;
+}
+
+/* close the offcanvas by clicking the close button */
+.close-menu,
+.close-btn,
+.close-cart{
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: #E2D1F9;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    background-color: #317773;
+    border-radius: 50%;
+    padding: 5px;
+    transition: all .5s;
+}
+
+/* stle the close buttons when hovering */
+.close-menu:hover,
+.close-btn:hover,
+.close-cart:hover{
+    border: 2px solid #317773;
+    background-color: #E2D1F9;
+    color: #317773;
+}
+
+.welcome,
+.have{
+    margin-bottom: 30px;
+}
+
+/* styling the h3 on the offcanvas */
+.welcome h2{
+    color: #317773;
+}
+
+/* giving the paragraphs inside the ofcanvas a color */
+.welcome p,
+.have p
+.benefits li{
+    color:#757575;
+}
+
+/* giving the "I have an...." h4 a margin bottom */
+.have h4{
+    margin-bottom: 10px;
+}
+
+/* styling the button anchor tag */
+.sign-up{
+    margin-bottom: 25px;
+}
+
+/* styling the sign in button */
+.sign-in{
+    width: 100%;
+    height: 45px;
+    color:#E2D1F9;
+    background-color: #317773;
+    border: none;
+    border-radius: 25px;
+    font-weight: 700;
+    font-size: 1.1em;
+    transition: .4s;
+    cursor: pointer;
+}
+
+/* styling the button when hovering */
+.sign-in:hover{
+    color: #317773;
+    background-color: #E2D1F9;
+    border: solid 2px #317773;
+}
+
+.sec-divider{
+    width: 100%;
+    height: 1px;
+    background-color: #757575;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+/* styling the benefits list */
+.have ul li{
+    color: #757575;
+    margin-left: 18px;
+    line-height: 25px;
+    font-size: smaller;
+}
+
+.have p{
+    color: #757575;
+}
+
+/* styling the sign in button */
+.register{
+    width: 100%;
+    height: 45px;
+    color: #317773;
+    background-color: #E2D1F9;
+    border: solid 2px #317773;
+    border-radius: 25px;
+    font-weight: 700;
+    font-size: 1.1em;
+    transition: .5s;
+    cursor: pointer;
+
+}
+
+/* styling the button when hovering */
+.register:hover{
+    color:#E2D1F9;
+    background-color: #317773;
+    border: none;
+}
+
+/* hiding the menu bare on full width */
+.menu-button{
+    display: none;
+}
+
+/* Making the whish container a position relative */
+.whish{
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-weight: 500;
+}
+
+/* styling the wishlist button */
+.whish-list{
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px ;
+    height: 35px;
+    font-weight: 700;
+    transition: 0.8s;
+}
+
+/* creating animation when hovering on the Whishlist */
+.whish-list:hover{
+    transform: translateY(-18px);
+    opacity: 1;
+    background-color: #317773;
+    color: #E2D1F9;
+}
+
+/* changing the fon for the heart icon */
+.whish-heart{
+    font-size: 1.5em;
+}
+
+/* animating the woishlist text to appear when hovering */
+.whishlist{
+    position: absolute;
+    top: 65%;
+    opacity: 0;
+    transition: 1s;
+}
+
+/* when hovering the wishlist */
+.whish:hover .whishlist{
+    opacity: 1;
+}
+
+
+/* defining a min width for the cart button */
+.Cart-button{
+    min-width: 30px;
+}
+
+/* Preparing for animation on my account and cart button */
+.my-account::before, .Cart-button::before{
+    content: '';
+    position: absolute;
+    height: 50px;
+    width: 10px;
+    background-color: #f3f3f39f;
+    box-shadow: 0 0 15px #fff;
+    filter: blur(1px);
+    opacity: 0.9;
+    transition: 0.7s;
+    transform: rotate(-20deg) translateX(-40px);
+}
+
+/* setting transition time on animating cart button */
+.Cart-button::before{
+    transition: 1.2s;
+}
+
+
+/* animating my account and cart button only on hovering */
+.my-account:hover::before, .Cart-button:hover::before{
+    transform: rotate(10deg) translate(130px);
+}
+
+/* creating a cart  */
+.offcanvas-cart{
+    position: fixed;
+    background: #E2D1F9;
+    width: 27%;
+    min-width: 350px;
+    bottom: 0;
+    top: 0px;
+    right: 0;
+    z-index: 1000;
+    transform: translateX(100%);
+    transition: all .5s ease;
+    padding: 20px 10.5px;
+}
+
+/* styling the cart header */
+.Cart-header{
+    background-color: #317773;
+    color: #E2D1F9;
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 15px;
+}
+
+/* giving styles to the cart images */
+.cart-img{
+    width:70px;
+    height: 70px;
+    border-radius: 25px;
+    object-fit: contain;
+    padding: 10px;
+}
+
+
+.grid{
+    display: flex;
+    column-gap: 15px;
+}
+
+/* styling the box of the cart */
+.cart-box{
+    display: grid;
+    grid-template-columns: 32% 50% 18%;
+    align-items: center;
+    gap:1rem;
+    margin-top: 1rem;
+}
+
+/* giving styles to the container that holds details */
+.detail-box{
+    display: grid;
+    row-gap: 0.5rem;
+}
+
+/* styling the name of the product in the cart */
+.cart-product-tittle{
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/* styling the price text inside the cart  */
+.cart-price{
+    font-weight: 500;
+}
+
+/* making the cart content scrollable */
+.cart-content{
+    max-height: 500px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+/* stling the quantity input in the cart */
+.cart-quantity{
+    border: 2px solid #317773;
+    outline-color: #E2D1F9;
+    width: 3rem;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1rem;
+}
+
+/* giving styles to the delete product button */
+.cart-remove-con{
+    font-size: 16px;
+    color: #E2D1F9;
+    background-color: #317773;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    transition: all .5s;
+
+}
+
+/* giving styles to the delete product button when hovering */
+.cart-remove-con:hover{
+    color: #317773;
+    background-color: #E2D1F9;
+    border: 2px solid #317773;
+}
+
+/* styling the total container */
+.total{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1.5rem;
+    border-top: 2px solid #317773;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+/* styling the text of the total amount in the cart */
+.total-title{
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+/* giving a space to the total price text */
+.total-price{
+    margin-left: 0.5rem;
+}
+
+/*Styling the buy button  */
+.btn-buy{
+    display: flex;
+    margin: 1.5rem auto 0 auto;
+    padding: 12px 20px;
+    border: none;
+    background: #317773;
+    color: #E2D1F9;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+/* style for hovering the buy button */
+.btn-buy:hover{
+    background:#E2D1F9 ;
+    color: #317773;
+    border: 1px solid #317773;
+}
+
+/* ***************************************************************************The following styles will be styles fot the nav bar****************************************************************************************************** */
+
+/* GIVING THE NAVIGATION CONTAINER STYLES */
+nav{
+    background-color: #317773;
+    padding: 10px 0;
+    /* position: fixed; */
+    left: 0;
+    right: 0;
+    top: 80px;
+    z-index: 900;
+    display: flex;
+    justify-content: space-between;
+}
+
+.r-nav{
+    /* background-color: aquamarine; */
+    display: flex;
+    justify-content: space-around;
+    flex: 0.6;
+}
+
+/* Separating the navigation links and removing the bullets */
+.navigation{
+    display: flex;
+    padding: 10px 0;
+    color: #E2D1F9;
+    justify-content: space-around;
+    font-size: 0.9em;
+    list-style-type: none;
+    background-color: #757575;
+}
+
+/*  */
+.nav-item{
+    margin: 0 12px ;
+}
+
+/* giving the all <a> on the nav section the same styles */
+.nav-item a,
+.track-order a{
+    color: #E2D1F9;
+    padding: 5px;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+/* styling the navigation links hovering */
+.navigation .nav-item a:hover,
+.track-order a:hover{
+    /* color: #00ffea; */
+    background-color: #E2D1F9;
+    padding: 7px ;
+    border-radius: 10px;
+    color: #317773;
+}
+
+/* The middle section/Search-bar container */
+.searchbar-container{
+    /* background-color: aqua; */
+    display: flex;
+    position: relative;
+    padding: 5px;
+    width: 50%;
+    min-width: 250px;
+}
+
+/* Giving styles to the search-bar */
+.search-bar{
+    border: 2px solid #317773;
+    border-radius: 25px;
+    background-color: #E2D1F9;
+    outline: none;
+    padding: 10px 5px;
+    width: 100%;
+    box-shadow: inset 2px 5px 10px rgba(0,0,0,0.3);
+    transition: 300ms ease-in-out;
+}
+
+/* giving the input new styles when clicked/typing */
+.search-bar:focus {
+        background-color: white;
+        transform: scale(1.00);
+        box-shadow: 13px 13px 100px #969696,
+                   -13px -13px 100px #ffffff;
+}
+
+/* changing the search-bar paceholder color  and size*/
+.search-bar::placeholder{
+    color: #317773;
+    font-weight: 500;
+}
+
+/* Styling and positioning the search icon */
+.search{
+    background-color: #317773;
+    color: #E2D1F9;
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    right: 6px;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    font-weight: 500;
+}
+
+/* giving th active link a different style */
+.active a{
+    background-color: #E2D1F9;
+    padding: 7px ;
+    border-radius: 12px;
+    color: #317773;
+}
+
+/* styling the "track order container" */
+.track-order{
+    display: flex;
+    margin-right: 30px;
+    align-items: center;
+    width: auto;
+    color: #E2D1F9;
+    font-size: 0.9em;
+    cursor: pointer;
+}

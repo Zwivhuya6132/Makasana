@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- link to fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <!-- Logo container/Left Section -->
+        <div class="logo-container">
+            <img class="logo" src="images/The-happy-store.jpg" alt="logo">
+            <h1 class="name">The Justified Crew</h1>
+        </div>
+
+        <!-- Search-bar container/Middle section -->
+        <!-- <form method="POST" action="" enctype="multipart/form-data" class="searchbar-container"> -->
+            
+            <!-- <input class="search-bar" type="text" name="search" placeholder="Search Product or Brands"> -->
+
+            <!-- <small class="search"> Parent container for the search Icon -->
+                <!-- creating a search Icon using fontawesome -->
+                <!-- <i class="fa-solid fa-magnifying-glass search-icon"></i> -->
+            <!-- </small> -->
+
+        <!-- </form> -->
+
+        <div class="r-sec">
+        <!-- Whishlist -->
+            <span class="whish">
+                <div class="whish-list"> <!--Parent container for the heart Icon-->
+                    <!-- creating a heart Icon using fontawesome -->
+                    <i class="fa-regular fa-heart whish-heart"></i>
+                </div>
+                <p class="whishlist">Wishlist</p>
+
+            </span>
+
+            <!-- My Account -->
+            <span class="my-account open-btn" id="open-Btn"> <!--Parent container for the "My Account button"-->
+                <!-- creating a profile Icon using fontawesome -->
+                <i class="fa-solid fa-user account" ></i>&nbsp;&nbsp;&nbsp;
+
+                <p class="account-name">My Account</p>&nbsp;&nbsp;&nbsp;
+                <!-- creating a drop-down Icon using fontawesome -->
+                <i class="fa-solid fa-caret-down down"></i>
+            </span>
+
+            <!-- Dropdown Content -->
+            <div class="offcanvas-account" id="offcanvasMenu">
+
+                <a class="close-btn" href="#">
+                    <i class="fa-solid fa-xmark"></i>
+                </a>
+                <div class="welcome">
+                    <h2>My Account</h2>
+                    <p>Welcome to The Justified Crew</p>
+                </div>
+
+                <div class="have">
+                    <h4>I have an account</h4>
+                    <p>Fill in your username and password to access your account.</p>
+                </div>
+
+                <a href="login.php" class="sign-up">
+                    <input type="button" value="Sign In" class="sign-in">
+                </a>
+
+                <div class="sec-divider"></div>
+
+                <div class="have">
+                    <h4>I am a new customer</h4>
+                    <p>By creating an account with our store, you will be able to:</p>
+                    <ul>
+                        <li>Move through the checkout process faster!</li>
+                        <li>Store multiple delivery addresses.</li>
+                        <li>View and track your orders.</li>
+                    </ul>
+                </div>
+
+                <a href="registration.php" class="reg">
+                    <input type="button" value="Create an account" class="register">
+                </a>
+
+            </div>
+
+            <!-- Cart -->
+            <span class="Cart-button open-cart">
+                <i class="fa-solid fa-cart-shopping"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <p class="cart-count">0</p>
+            </span>
+            <!-- Cart Content -->
+            <div class="offcanvas-cart" id="cart-offcanvas">
+
+                <a class="close-cart" href="#">
+                    <i class="fa-solid fa-xmark"></i>
+                </a>
+
+                <div class="Cart-header">
+                    <h2> My Cart</h2>
+                </div>
+
+                <!-- thiss div is where the iteam added to cart will be contained -->
+                <div class="cart-content">
+                    
+                </div>
+
+                <div class="total">
+                    <div class="total-tittle">Total</div>
+                    <div class="total-price">R0</div>
+                </div>
+
+                <div style="display: flex;">
+                    <button type="button" class="btn-buy">Continue Shopping</button>
+                    <button type="button" class="btn-buy">go to checkout</button>
+                </div>
+                <!-- <i class="fa-solid fa-xmark"></i> -->
+
+            </div>
+
+        </div>
+
+
+
+    </header> 
+
+<!---------------- THE HTML CODE BELOW IS FOR THE NAVIGATION SECTION UP UNTIL THE CLOSING TAG OF NAV (</nav>)--------------------------->
+
+
+
+    <nav>
+
+        <div class="menu-section">
+            <span class="menu-button open-menu">
+              <i class="fa-solid fa-bars"></i>
+            </span>
+            <!-- Dropdown Menu -->
+            <div class="dropdown-menu">
+              <ul class="menu-items">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Brands</a></li>
+                <li><a href="#">Sales</a></li>
+              </ul>
+            </div>
+          </div>
+
+        <!-- navigation links -->
+        <ul class="navigation">
+            <!-- <li class="nav-item <?php if($page == 'home'){echo 'active';}?>"><a href="index.php">Home</a></li> -->
+            <!-- <li class="nav-item <?php if($page == 'electronics'){echo 'active';}?>"><a href="products.php">Electronics</a></li> -->
+            <!-- <li class="nav-item <?php if($page == 'ladies'){echo 'active';}?>"><a href="women.php">Ladies</a></li> -->
+            <!-- <li class="nav-item <?php if($page == 'mens'){echo 'active';}?>"><a href="men.php">Mens</a></li> -->
+            <!-- <li class="nav-item <?php if($page == 'kids'){echo 'active';}?>"><a href="kids.php">Kids</a></li> -->
+            <!-- <li class="nav-item <?php if($page == 'funutures'){echo 'active';}?>"><a href="brands.php">Funutures</a></li> -->
+            <!-- <li class="nav-item <?php if($page == 'appliences'){echo 'active';}?>"><a href="sales.php">Loadshedding</a></li> -->
+
+            <li class="nav-item"><a href="#">Home</a></li>
+            <li class="nav-item"><a href="#">Products</a></li>
+            <li class="nav-item"><a href="#">Brands</a></li>
+            <li class="nav-item"><a href="#">Sales</a></li>
+        </ul>
+
+        <div class="r-nav">
+
+            <form method="POST" action="" enctype="multipart/form-data" class="searchbar-container">
+                
+                <input class="search-bar" type="text" name="search" placeholder="Search Product or Brands">
+
+                <small class="search"> <!--Parent container for the search Icon-->
+                    <!-- creating a search Icon using fontawesome -->
+                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                </small>
+
+            </form>
+
+            <small class="track-order">
+                <!-- I inserted the truck icon inside <a> so that they can change style together on hover -->
+                <a href="track_order.php" class="track"> <i class="fa-solid fa-truck-fast"></i> Track Order</a>
+            </small>
+
+        </div>
+
+    </nav>
+
+    <!--The following containers are for the slide show-->
+    <section class="slideshow-sec">
+
+        <div class="slides fade">
+            <img src="images/Rectangle 19.png" alt="" class="imgs">
+        </div>
+
+        <div class="slides fade">
+            <img src="images/Product  3.png" alt="" class="imgs">
+        </div>
+
+        <div class="slides fade">
+            <img src="images/Product  4.png" alt="" class="imgs">
+        </div>
+
+        <div class="slides fade">
+            <img src="images/Product 1.png" alt="" class="imgs">
+        </div>
+
+        <!-- The dots/circles -->
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+
+        </div>
+
+    </section>
+
+
+
+    <section class="shop-by-brands" id="shop-by-brands1">
+        <h1 class="cellular">Cellular</h1>
+
+        <div class="cellular-grid">
+
+            <div class="shop-item">
+
+                <div class="product-container">
+                    <img src="images/photo-1601784551446-20c9e07cdbdb.avif" alt="" class="shop-item-image">
+                </div>
+
+                <div class="product-details">
+                    <div class="shop-item-tittle">Huawei Nova 8i 128GB</div>
+                    <p class="shop-item-price">R6499.99</p>
+                </div>
+        
+                <div class="shop-items"> 
+
+                    <div class="buttons-auto">
+                        <button class="add-to-cart shop-item-button">Add to Cart</button>
+                        <button class="add-to-cart shop-item-button">Add to Wishlist</button>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="shop-item">
+
+                <div class="product-container">
+                    <img src="images/Huawei P40 Lite Dual Sim 128GB.jpg" alt="" class="shop-item-image">
+                </div>
+
+                <div class="product-details">
+                    <div class="shop-item-tittle">Huawei P40 Lite Dual Sim 128GB</div>
+                    <p class="shop-item-price">R5296.00</p>
+                </div>
+        
+                <div class="shop-items"> 
+
+                    <div class="buttons-auto">
+                        <button class="add-to-cart shop-item-button">Add to Cart</button>
+                        <button class="add-to-cart shop-item-button">Add to Wishlist</button>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="shop-item">
+
+                <div class="product-container">
+                    <img src="images/Huawei P20 Lite.jpg" alt="" class="shop-item-image">
+                </div>
+
+                <div class="product-details">
+                    <div class="shop-item-tittle">Huawei P20 Lite</div>
+                    <p class="shop-item-price">R3998.98</p>
+                </div>
+        
+                <div class="shop-items"> 
+
+                    <div class="buttons-auto">
+                        <button class="add-to-cart shop-item-button">Add to Cart</button>
+                        <button class="add-to-cart shop-item-button">Add to Wishlist</button>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="shop-item">
+
+                <div class="product-container">
+                    <img src="images/download (3).jpg" alt="" class="shop-item-image">
+                </div>
+
+                <div class="product-details">
+                    <div class="shop-item-tittle">Huawei Nova 9E 128GB single Sim</div>
+                    <p class="shop-item-price">R8899.00</p>
+                </div>
+        
+                <div class="shop-items"> 
+
+                    <div class="buttons-auto">
+                        <button class="add-to-cart shop-item-button">Add to Cart</button>
+                        <button class="add-to-cart shop-item-button">Add to Wishlist</button>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="shop-item">
+
+                <div class="product-container">
+                    <img src="images/iphone 14.avif" alt="" class="shop-item-image">
+                </div>
+
+                <div class="product-details">
+                    <div class="shop-item-tittle">Iphone 14 128GB single sim</div>
+                    <p class="shop-item-price">R14999.99</p>
+                </div>
+        
+                <div class="shop-items"> 
+
+                    <div class="buttons-auto">
+                        <button class="add-to-cart shop-item-button">Add to Cart</button>
+                        <button class="add-to-cart shop-item-button">Add to Wishlist</button>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="shop-item">
+
+                <div class="product-container">
+                    <img src="images/iphone 13 pro.avif" alt="" class="shop-item-image">
+                </div>
+
+                <div class="product-details">
+                    <div class="shop-item-tittle">Iphone 13 pro 32GB single sim</div>
+                    <p class="shop-item-price">R11999.00</p>
+                </div>
+        
+                <div class="shop-items"> 
+
+                    <div class="buttons-auto">
+                        <button class="add-to-cart shop-item-button">Add to Cart</button>
+                        <button class="add-to-cart shop-item-button">Add to Wishlist</button>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="shop-item">
+
+                <div class="product-container">
+                    <img src="images/Samsung S21 ultra 5G.avif" alt="" class="shop-item-image">
+                </div>
+
+                <div class="product-details">
+                    <div class="shop-item-tittle">Sumsung S21 Ultra 5G</div>
+                    <p class="shop-item-price">R13789.98</p>
+                </div>
+        
+                <div class="shop-items"> 
+
+                    <div class="buttons-auto">
+                        <button class="add-to-cart shop-item-button">Add to Cart</button>
+                        <button class="add-to-cart shop-item-button">Add to Wishlist</button>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="shop-item">
+
+                <div class="product-container">
+                    <img src="images/Samsung S21 5G.avif" alt="" class="shop-item-image">
+                </div>
+
+                <div class="product-details">
+                    <div class="shop-item-tittle">Samsung S21 5G</div>
+                    <p class="shop-item-price">R12000.63</p>
+                </div>
+        
+                <div class="shop-items"> 
+
+                    <div class="buttons-auto">
+                        <button class="add-to-cart shop-item-button">Add to Cart</button>
+                        <button class="add-to-cart shop-item-button">Add to Wishlist</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+    
+    <section class="shop-by-brands">
+        <h1 class="cellular">Electronics</h1>
+
+        <div class="cellular-grid">
+
+            <div class="shop-item">
+
+                <div class="product-container">
+                    <img src="images/Product 1.png" alt="" class="shop-item-image">
+                </div>
+
+                <div class="product-details">
+                    <div class="shop-item-tittle">Pink Davhana Headset</div>
+                    <p class="shop-item-price">R788.99</p>
+                </div>
+        
+                <div class="shop-items"> 
+
+                    <div class="buttons-auto">
+                        <button class="add-to-cart shop-item-button">Add to Cart</button>
+                        <button class="add-to-cart shop-item-button">Add to Wishlist</button>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="shop-item">
+
+                <div class="product-container">
+                    <img src="images/USB Fan.jpg" alt="" class="shop-item-image">
+                </div>
+
+                <div class="product-details">
+                    <div class="shop-item-tittle">Table Fan USB Port</div>
+                    <p class="shop-item-price">R350.00</p>
+                </div>
+        
+                <div class="shop-items"> 
+
+                    <div class="buttons-auto">
+                        <button class="add-to-cart shop-item-button">Add to Cart</button>
+                        <button class="add-to-cart shop-item-button">Add to Wishlist</button>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="shop-item">
+
+                <div class="product-container">
+                    <img src="images/Airpods.avif" alt="" class="shop-item-image">
+                </div>
+
+                <div class="product-details">
+                    <div class="shop-item-tittle">Davhana Airpods</div>
+                    <p class="shop-item-price">R485.00</p>
+                </div>
+        
+                <div class="shop-items"> 
+
+                    <div class="buttons-auto">
+                        <button class="add-to-cart shop-item-button">Add to Cart</button>
+                        <button class="add-to-cart shop-item-button">Add to Wishlist</button>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="shop-item">
+
+                <div class="product-container">
+                    <img src="images/3 in 1 USB Cable.avif" alt="" class="shop-item-image">
+                </div>
+
+                <div class="product-details">
+                    <div class="shop-item-tittle">3 in 1 USB Cable</div>
+                    <p class="shop-item-price">R130.00</p>
+                </div>
+        
+                <div class="shop-items"> 
+
+                    <div class="buttons-auto">
+                        <button class="add-to-cart shop-item-button">Add to Cart</button>
+                        <button class="add-to-cart shop-item-button">Add to Wishlist</button>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="shop-item">
+
+                <div class="product-container">
+                    <img src="images/Samsung USB.avif" alt="" class="shop-item-image">
+                </div>
+
+                <div class="product-details">
+                    <div class="shop-item-tittle">Samsung USB 32GB</div>
+                    <p class="shop-item-price">R249.98</p>
+                </div>
+        
+                <div class="shop-items"> 
+
+                    <div class="buttons-auto">
+                        <button class="add-to-cart shop-item-button">Add to Cart</button>
+                        <button class="add-to-cart shop-item-button">Add to Wishlist</button>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="shop-item">
+
+                <div class="product-container">
+                    <img src="images/Product  4.png" alt="" class="shop-item-image">
+                </div>
+
+                <div class="product-details">
+                    <div class="shop-item-tittle">MIVI Type C USB Adoptor</div>
+                    <p class="shop-item-price">R129.99</p>
+                </div>
+        
+                <div class="shop-items"> 
+
+                    <div class="buttons-auto">
+                        <button class="add-to-cart shop-item-button">Add to Cart</button>
+                        <button class="add-to-cart shop-item-button">Add to Wishlist</button>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="shop-item">
+
+                <div class="product-container">
+                    <img src="images/Product  3.png" alt="" class="shop-item-image">
+                </div>
+
+                <div class="product-details">
+                    <div class="shop-item-tittle">Wireless White Keyboard and Mouse</div>
+                    <p class="shop-item-price">R312.99</p>
+                </div>
+        
+                <div class="shop-items"> 
+
+                    <div class="buttons-auto">
+                        <button class="add-to-cart shop-item-button">Add to Cart</button>
+                        <button class="add-to-cart shop-item-button">Add to Wishlist</button>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="shop-item">
+
+                <div class="product-container">
+                    <img src="images/wireless keybords.jpg" alt="" class="shop-item-image">
+                </div>
+
+                <div class="product-details">
+                    <div class="shop-item-tittle">Davhana Wireless Gaming Set</div>
+                    <p class="shop-item-price">R1200.00</p>
+                </div>
+        
+                <div class="shop-items"> 
+
+                    <div class="buttons-auto">
+                        <button class="add-to-cart shop-item-button">Add to Cart</button>
+                        <button class="add-to-cart shop-item-button">Add to Wishlist</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+    <section class="shop-by-brands">
+        <h1 class="cellular">Laptops</h1>
+
+        <div class="cellular-grid">
+
+            <div class="shop-item">
+
+                <div class="product-container">
+                    <img src="images/Product 1.png" alt="" class="shop-item-image">
+                </div>
+
+                <div class="product-details">
+                    <div class="shop-item-tittle">Mashudu Tambani</div>
+                    <p class="shop-item-price">R12.99</p>
+                </div>
+        
+                <div class="shop-items"> 
+
+                    <div class="buttons-auto">
+                        <button class="add-to-cart shop-item-button">Add to Cart</button>
+                        <button class="add-to-cart shop-item-button">Add to Wishlist</button>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="shop-item">
+
+                <div class="product-container">
+                    <img src="images/Product 1.png" alt="" class="shop-item-image">
+                </div>
+
+                <div class="product-details">
+                    <div class="shop-item-tittle">Mashudu Tambani</div>
+                    <p class="shop-item-price">R12.99</p>
+                </div>
+        
+                <div class="shop-items"> 
+
+                    <div class="buttons-auto">
+                        <button class="add-to-cart shop-item-button">Add to Cart</button>
+                        <button class="add-to-cart shop-item-button">Add to Wishlist</button>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="shop-item">
+
+                <div class="product-container">
+                    <img src="images/Product 1.png" alt="" class="shop-item-image">
+                </div>
+
+                <div class="product-details">
+                    <div class="shop-item-tittle">Mashudu Tambani</div>
+                    <p class="shop-item-price">R12.99</p>
+                </div>
+        
+                <div class="shop-items"> 
+
+                    <div class="buttons-auto">
+                        <button class="add-to-cart shop-item-button">Add to Cart</button>
+                        <button class="add-to-cart shop-item-button">Add to Wishlist</button>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="shop-item">
+
+                <div class="product-container">
+                    <img src="images/Product 1.png" alt="" class="shop-item-image">
+                </div>
+
+                <div class="product-details">
+                    <div class="shop-item-tittle">Mashudu Tambani</div>
+                    <p class="shop-item-price">R12.99</p>
+                </div>
+        
+                <div class="shop-items"> 
+
+                    <div class="buttons-auto">
+                        <button class="add-to-cart shop-item-button">Add to Cart</button>
+                        <button class="add-to-cart shop-item-button">Add to Wishlist</button>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="shop-item">
+
+                <div class="product-container">
+                    <img src="images/Product 1.png" alt="" class="shop-item-image">
+                </div>
+
+                <div class="product-details">
+                    <div class="shop-item-tittle">Mashudu Tambani</div>
+                    <p class="shop-item-price">R12.99</p>
+                </div>
+        
+                <div class="shop-items"> 
+
+                    <div class="buttons-auto">
+                        <button class="add-to-cart shop-item-button">Add to Cart</button>
+                        <button class="add-to-cart shop-item-button">Add to Wishlist</button>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="shop-item">
+
+                <div class="product-container">
+                    <img src="images/Product 1.png" alt="" class="shop-item-image">
+                </div>
+
+                <div class="product-details">
+                    <div class="shop-item-tittle">Mashudu Tambani</div>
+                    <p class="shop-item-price">R12.99</p>
+                </div>
+        
+                <div class="shop-items"> 
+
+                    <div class="buttons-auto">
+                        <button class="add-to-cart shop-item-button">Add to Cart</button>
+                        <button class="add-to-cart shop-item-button">Add to Wishlist</button>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="shop-item">
+
+                <div class="product-container">
+                    <img src="images/Product 1.png" alt="" class="shop-item-image">
+                </div>
+
+                <div class="product-details">
+                    <div class="shop-item-tittle">Mashudu Tambani</div>
+                    <p class="shop-item-price">R12.99</p>
+                </div>
+        
+                <div class="shop-items"> 
+
+                    <div class="buttons-auto">
+                        <button class="add-to-cart shop-item-button">Add to Cart</button>
+                        <button class="add-to-cart shop-item-button">Add to Wishlist</button>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="shop-item">
+
+                <div class="product-container">
+                    <img src="images/Product 1.png" alt="" class="shop-item-image">
+                </div>
+
+                <div class="product-details">
+                    <div class="shop-item-tittle">Mashudu Tambani</div>
+                    <p class="shop-item-price">R12.99</p>
+                </div>
+        
+                <div class="shop-items"> 
+
+                    <div class="buttons-auto">
+                        <button class="add-to-cart shop-item-button">Add to Cart</button>
+                        <button class="add-to-cart shop-item-button">Add to Wishlist</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+    <section class="shop-by-brands">
+        <h1 class="cellular">Appliances</h1>
+
+        <div class="cellular-grid">
+
+            <div class="shop-item">
+
+                <div class="product-container">
+                    <img src="images/Product 1.png" alt="" class="shop-item-image">
+                </div>
+
+                <div class="product-details">
+                    <div class="shop-item-tittle">Mashudu Tambani</div>
+                    <p class="shop-item-price">R12.99</p>
+                </div>
+        
+                <div class="shop-items"> 
+
+                    <div class="buttons-auto">
+                        <button class="add-to-cart shop-item-button">Add to Cart</button>
+                        <button class="add-to-cart shop-item-button">Add to Wishlist</button>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="shop-item">
+
+                <div class="product-container">
+                    <img src="images/Product 1.png" alt="" class="shop-item-image">
+                </div>
+
+                <div class="product-details">
+                    <div class="shop-item-tittle">Mashudu Tambani</div>
+                    <p class="shop-item-price">R12.99</p>
+                </div>
+        
+                <div class="shop-items"> 
+
+                    <div class="buttons-auto">
+                        <button class="add-to-cart shop-item-button">Add to Cart</button>
+                        <button class="add-to-cart shop-item-button">Add to Wishlist</button>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="shop-item">
+
+                <div class="product-container">
+                    <img src="images/Product 1.png" alt="" class="shop-item-image">
+                </div>
+
+                <div class="product-details">
+                    <div class="shop-item-tittle">Mashudu Tambani</div>
+                    <p class="shop-item-price">R12.99</p>
+                </div>
+        
+                <div class="shop-items"> 
+
+                    <div class="buttons-auto">
+                        <button class="add-to-cart shop-item-button">Add to Cart</button>
+                        <button class="add-to-cart shop-item-button">Add to Wishlist</button>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="shop-item">
+
+                <div class="product-container">
+                    <img src="images/Product 1.png" alt="" class="shop-item-image">
+                </div>
+
+                <div class="product-details">
+                    <div class="shop-item-tittle">Mashudu Tambani</div>
+                    <p class="shop-item-price">R12.99</p>
+                </div>
+        
+                <div class="shop-items"> 
+
+                    <div class="buttons-auto">
+                        <button class="add-to-cart shop-item-button">Add to Cart</button>
+                        <button class="add-to-cart shop-item-button">Add to Wishlist</button>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="shop-item">
+
+                <div class="product-container">
+                    <img src="images/Product 1.png" alt="" class="shop-item-image">
+                </div>
+
+                <div class="product-details">
+                    <div class="shop-item-tittle">Mashudu Tambani</div>
+                    <p class="shop-item-price">R12.99</p>
+                </div>
+        
+                <div class="shop-items"> 
+
+                    <div class="buttons-auto">
+                        <button class="add-to-cart shop-item-button">Add to Cart</button>
+                        <button class="add-to-cart shop-item-button">Add to Wishlist</button>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="shop-item">
+
+                <div class="product-container">
+                    <img src="images/Product 1.png" alt="" class="shop-item-image">
+                </div>
+
+                <div class="product-details">
+                    <div class="shop-item-tittle">Mashudu Tambani</div>
+                    <p class="shop-item-price">R12.99</p>
+                </div>
+        
+                <div class="shop-items"> 
+
+                    <div class="buttons-auto">
+                        <button class="add-to-cart shop-item-button">Add to Cart</button>
+                        <button class="add-to-cart shop-item-button">Add to Wishlist</button>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="shop-item">
+
+                <div class="product-container">
+                    <img src="images/Product 1.png" alt="" class="shop-item-image">
+                </div>
+
+                <div class="product-details">
+                    <div class="shop-item-tittle">Mashudu Tambani</div>
+                    <p class="shop-item-price">R12.99</p>
+                </div>
+        
+                <div class="shop-items"> 
+
+                    <div class="buttons-auto">
+                        <button class="add-to-cart shop-item-button">Add to Cart</button>
+                        <button class="add-to-cart shop-item-button">Add to Wishlist</button>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="shop-item">
+
+                <div class="product-container">
+                    <img src="images/Product 1.png" alt="" class="shop-item-image">
+                </div>
+
+                <div class="product-details">
+                    <div class="shop-item-tittle">Mashudu Tambani</div>
+                    <p class="shop-item-price">R12.99</p>
+                </div>
+        
+                <div class="shop-items"> 
+
+                    <div class="buttons-auto">
+                        <button class="add-to-cart shop-item-button">Add to Cart</button>
+                        <button class="add-to-cart shop-item-button">Add to Wishlist</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+
+    <footer>
+
+        <div class="footer">
+            <div class="sec-one">
+                <h1 class="follow">The Justified Crew</h1>
+                <p>We the best people because God said so</p>
+            </div>
+            <div class="sec-two">
+                <h1 class="follow">Subscribe to our newsletter</h1>
+                <input type="text" placeholder="Enter Your email" name="subscribe" class="footer-email" >
+                <button class="subscribe-button">Subscribe</button>
+            </div>
+            <div class="sec-three">
+                <h1 class="follow">Follow Us:</h1>
+                <span class="social-media">
+                    <i class="fa-brands fa-square-facebook social"></i>
+                    <i class="fa-brands fa-square-instagram social"></i>
+                    <i class="fa-brands fa-square-twitter social"></i>
+                </span>
+    
+            </div>
+            <div class="sec-four">
+                <h1 class="follow">Contact Us on:</h1>
+                <p>078 568 3557</p>
+                <p>zwivhuyadavhana6132@gmail.com</p>
+            </div> 
+        </div>
+
+    </footer>
+
+    
+    <script src="java script/main.js"></script>
+    <script src="java script/cart.js"></script>
+    
+</body>
+</html>
