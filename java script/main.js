@@ -1,16 +1,14 @@
 //Creating variable that I'll use later.
 const openBtn = document.querySelector('.open-btn');
 const openCart = document.querySelector('.open-cart');
-// const openMenu = document.querySelector('.open-menu');
+const openMenu = document.querySelector('.menu-button');
 const closeBtn = document.querySelector('.close-btn');
 const closeCart = document.querySelector('.close-cart');
 const offcanvasMenu = document.querySelector('.offcanvas-account');
 const sideMenu = document.querySelector('.dropdown-menu');
 const offcanvasCart = document.querySelector('.offcanvas-cart');
 
-
-
-// Add/Remove a class called "on" so that it can open/close the offcanvas for My accont.
+// Add/Remove a class called "on" so that it can open/close the offcanvas for My account.
 openBtn.addEventListener('click', function(e) {
     e.preventDefault();
     offcanvasMenu.classList.toggle('on');
@@ -33,6 +31,19 @@ closeCart.addEventListener('click', function(e) {
     e.preventDefault();
     offcanvasCart.classList.remove('on');
 });
+
+// Toggle the Side Menu when clicking the openMenu button.
+// openMenu.addEventListener('click', function(e){
+//   e.preventDefault();
+//   sideMenu.classList.toggle('on');
+// });
+
+// Close the Side Menu when clicking the closeMenu button.
+closeMenu.addEventListener('click', function(e) {
+  e.preventDefault();
+  sideMenu.classList.remove('on');
+});
+
 
 
 
