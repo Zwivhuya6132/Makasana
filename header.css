@@ -1,0 +1,754 @@
+/* giving Everything a default stlye */
+*{
+    margin: 0;
+    padding:0;
+    scroll-padding-top: 2rem;
+    scroll-behavior: smooth;
+    text-decoration: none;
+}
+
+/* Stlying the hearder to be flex */
+header{
+    display: flex;
+    background-color: #E2D1F9;
+    padding: 1%;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 100;
+    justify-content: space-between;
+}
+
+/* Styling the logo container */
+.logo-con{
+    display: flex;
+    color: #317773;
+    justify-content: center;
+    align-items: center;
+    width: 17%;
+    min-width: fit-content;
+    margin-right: 20px;
+}
+
+/* giving the logo the size and shape */
+.logo{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* styling the parent container of the middle and the right section of the feader */
+.parent{
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* position: relative; */
+}
+
+/* Styling the searchbar container */
+.first-child{
+    display: flex;
+    position: relative;
+    width: 47%;
+    margin-right: 20px;
+    min-width: 230px;
+    cursor: pointer;
+}
+
+/* giving the searchbar a size and shape*/
+.search-bar{
+    border-radius: 25px;
+    border: 2px solid #317773;
+    background-color: #f7feff;
+    padding: 10px 5px;
+    width: 100%;
+
+}
+
+/* styling the placeholder of the searchbar */
+.search-bar::placeholder{
+    color: #317773;
+    font-weight: 700;
+}
+
+/* Styling the search icon */
+.search{
+    background-color: #317773;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 1.2px;
+    bottom: 1.5px;
+    font-size: 1.1em;
+    border-radius: 50%;
+    padding: 5px;
+    color: #E2D1F9;
+    width: 27px;
+    height: 27px;
+}
+
+/* This is a whishlist parent container  */
+.whish{
+    position: relative;
+    color: #317773 ;
+}
+
+/* Styling the wishlist button/icon*/
+.second-child{
+    margin-right: 20px;
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    /* background-color: #317773; */
+    border-radius: 50%;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    font-size: 1.5em;
+    transition: 0.8s;
+}
+
+/* this is the paragraph Whishlist that appear when hovering */
+.whishlist{
+    position: absolute;
+    top:65%;
+    right: 15%;
+    opacity: 0;
+    transition: 1s;
+}
+
+/* making the wishlist paragraph appear when hovering on its parent */
+.whish:hover .whishlist{
+    opacity: 1;
+}
+
+/* creating annimation when hovering the whishlist */
+.second-child:hover{
+    transform: translateY(-18px);
+    opacity: 1;
+    background-color: #317773;
+    color: #E2D1F9;
+}
+
+/* Giving the account button style and default font size */
+.third-child{
+    margin-right: 20px;
+    min-width: fit-content;
+    padding: 10px;
+}
+
+/* Styling the account icone on the "my account" */
+.account{
+    margin-right: 7px;
+}
+
+/* giving the dropdown icon a margin from the paragraph */
+.down{
+    margin-left: 7px;
+}
+
+/* making the cart content scrollable */
+.cart-content{
+    max-height: 500px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+/* styling how the offcanvas appear when the is on "on" class*/
+.offcanvas-account.on,
+.offcanvas-cart.on{
+    transform: translateY(0);
+}
+
+/* creating an offcanvas  */
+.offcanvas-account{
+    position: fixed;
+    background: #E2D1F9;
+    width: 24%;
+    bottom: 0;
+    top: 0px;
+    right: 0;
+    z-index: 1;
+    transform: translateX(100%);
+    transition: all .4s ease;
+    padding: 20px 10.5px;
+}
+
+/* close the offcanvas by clicking the close button */
+.close-btn,
+.close-cart{
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: #E2D1F9;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    background-color: #317773;
+    border-radius: 50%;
+    padding: 5px;
+    transition: all .5s;
+}
+
+/* stle the close buttons when hovering */
+.close-btn:hover,
+.close-cart:hover{
+    border: 2px solid #317773;
+    background-color: #E2D1F9;
+    color: #317773;
+}
+
+.welcome,
+.have{
+    margin-bottom: 30px;
+}
+
+/* styling the h3 on the offcanvas */
+.welcome h2{
+    color: #317773;
+}
+
+/* giving the paragraphs inside the ofcanvas a color */
+.welcome p,
+.have p
+.benefits li{
+    color:#757575;
+}
+
+/* giving the "I have an...." h4 a margin bottom */
+.have h4{
+    margin-bottom: 10px;
+}
+
+/* styling the button anchor tag */
+.sign-up{
+    margin-bottom: 25px;
+}
+
+/* styling the sign in button */
+.sign-in{
+    width: 100%;
+    height: 45px;
+    color:#E2D1F9;
+    background-color: #317773;
+    border: none;
+    border-radius: 25px;
+    font-weight: 700;
+    font-size: 1.1em;
+    transition: .4s;
+    cursor: pointer;
+}
+
+/* styling the button when hovering */
+.sign-in:hover{
+    color: #317773;
+    background-color: #E2D1F9;
+    border: solid 2px #317773;
+}
+
+.sec-divider{
+    width: 100%;
+    height: 1px;
+    background-color: #757575;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+/* styling the benefits list */
+.have ul li{
+    color: #757575;
+    margin-left: 18px;
+    line-height: 25px;
+    font-size: smaller;
+}
+
+.have p{
+    color: #757575;
+}
+
+/* styling the sign in button */
+.register{
+    width: 100%;
+    height: 45px;
+    color: #317773;
+    background-color: #E2D1F9;
+    border: solid 2px #317773;
+    border-radius: 25px;
+    font-weight: 700;
+    font-size: 1.1em;
+    transition: .5s;
+    cursor: pointer;
+
+}
+
+/* styling the button when hovering */
+.register:hover{
+    color:#E2D1F9;
+    background-color: #317773;
+    border: none;
+}
+
+/* styling cart and account button the same styles */
+.third-child,
+.forth-child{
+    display: flex;
+    position: relative;
+    align-items: center;
+    border-radius: 25px;
+    cursor: pointer;
+    color:#E2D1F9;
+    font-size: 1em;
+    background: linear-gradient(to right, #5d9e9b, #317773 );
+    overflow: hidden;
+}
+
+/* preparing for aninmation on the accout button */
+.third-child::before{
+    content: '';
+    position: absolute;
+    height: 50px;
+    width: 10px;
+    background: #f3f3f39f;
+    box-shadow: 0 0 15px #fff;
+    filter: blur(1px);
+    opacity: 0.9;
+    top: -13px;
+    transition: 0.7s;
+    transform: rotate(-20deg) translateX(-40px);
+}
+
+/* animating my account button on hover before */
+.third-child:hover::before{
+    transform: rotate(10deg) translate(130px);
+}
+
+/* Giving the cart button styles */
+.forth-child{
+    width: 10%;
+    min-width: 48px;
+    justify-content: space-around;
+    padding: 10px 5px;
+    margin-right: 20px;
+}
+
+/* preparing for aninmation on the cart button */
+.forth-child::before{
+    content: '';
+    position: absolute;
+    height: 50px;
+    width: 10px;
+    background: #f3f3f39f;
+    ;
+    box-shadow: 0 0 15px #fff;
+    filter: blur(1px);
+    opacity: 0.9;
+    top: -13px;
+    left: -5px;
+    transition: 1.2s;
+    transform: rotate(-20deg) translateX(-40px);
+}
+
+/* animating cart button on hover before */
+.forth-child:hover::before{
+    transform: rotate(10deg) translate(130px);
+}
+
+/* creating a cart  */
+.offcanvas-cart{
+    position: fixed;
+    background: #E2D1F9;
+    width: 24%;
+    /* height: 400px; */
+    bottom: 0;
+    top: 0px;
+    right: 0;
+    z-index: 1;
+    transform: translateX(100%);
+    transition: all .5s ease;
+    padding: 20px 10.5px;
+}
+
+.Cart-header{
+    background-color: #317773;
+    color: #E2D1F9;
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 15px;
+}
+
+/* THE STYLES BELOW ARE FOR THE NAVIGATION SECTION (A COMENT SIRMILAR TO THIS ONE WILL APPEAR WHEN ITS STYLES ARE DONE")*/
+
+/* GIVING THE NAVIGATION CONTAINER STYLES */
+nav{
+    background-color: #317773;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 80px;
+    z-index: 80;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Separating the navigation links and removing the bullets */
+.navigation{
+    display: flex;
+    padding: 10px 0;
+    color: #E2D1F9;
+    justify-content: space-around;
+    width: 25%;
+    font-size: 0.9em;
+    list-style-type: none;
+}
+
+/* giving the all <a> on the nav section the same styles */
+.nav-item a,
+.track-order a{
+    color: #E2D1F9;
+    padding: 5px;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+/* styling the < */
+.nav-item a:hover,
+.track-order :hover{
+    color: #00ffea;
+}
+
+
+/* giving th active link a different style */
+.active a{
+    color: #00ffea;
+}
+
+
+/* styling the "track order container" */
+.track-order{
+    display: flex;
+    margin-right: 30px;
+    align-items: center;
+    width: auto;
+    color: #E2D1F9;
+    font-size: 0.9em;
+    cursor: pointer;
+}
+
+/*  */
+
+
+
+.cart-img{
+    width:70px;
+    height: 70px;
+    border-radius: 25px;
+    object-fit: contain;
+    padding: 10px;
+}
+
+.grid{
+    display: flex;
+    column-gap: 15px;
+}
+
+.cart-box{
+    display: grid;
+    grid-template-columns: 32% 50% 18%;
+    align-items: center;
+    gap:1rem;
+    margin-top: 1rem;
+}
+
+.detail-box{
+    display: grid;
+    row-gap: 0.5rem;
+}
+
+.cart-product-tittle{
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.cart-price{
+    font-weight: 500;
+}
+
+.cart-quantity{
+    border: 2px solid #317773;
+    outline-color: #E2D1F9;
+    width: 3rem;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.cart-remove-con{
+    font-size: 16px;
+    color: #E2D1F9;
+    background-color: #317773;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    transition: all .5s;
+
+}
+
+.cart-remove-con:hover{
+    color: #317773;
+    background-color: #E2D1F9;
+    border: 2px solid #317773;
+}
+
+.total{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1.5rem;
+    border-top: 2px solid #317773;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.total-title{
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.total-price{
+    margin-left: 0.5rem;
+}
+
+.btn-buy{
+    display: flex;
+    margin: 1.5rem auto 0 auto;
+    padding: 12px 20px;
+    border: none;
+    background: #317773;
+    color: #E2D1F9;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.btn-buy:hover{
+    background:#E2D1F9 ;
+    color: #317773;
+    border: 1px solid #317773;
+}
+
+/* This is the slide show section styles */
+
+/* styling the container that holds the slide shows */
+.slideshow-sec{
+    top: 100px;
+    position: relative;
+    max-width: 90%;
+    margin: 25px auto;
+    
+}
+
+/* styling all the images inside the slide show */
+.slideshow-sec img{
+    width: 100%;
+    height: 350px;
+}
+
+/* Hide the image by default */
+.slides{
+    display: none;
+}
+
+/* The dot indicator */
+.dot{
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover{
+    background-color: #717171;
+}
+
+/* fading animation */
+.fade{
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade{
+    from {opacity: .4;}
+    to {opacity: 1;}
+}
+
+
+/* Shop by Brands styles */
+.shop-by-brands{
+    width: 100%;
+    margin-top: 50px;
+    position: relative;
+    transition: .7s;
+}
+
+#shop-by-brands1{
+    margin-top: 135px;
+}
+
+.cellular{
+    /* background-color: #317773; */
+    /* color: #E2D1F9; */
+    font-size: 2.5rem;
+    padding: 0 1.5%;
+}
+
+.cellular-grid{
+    display: grid;
+    height: fit-content;
+    margin-top: 35px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    column-gap: 15px;
+    row-gap: 20px;
+    padding: auto;
+
+}
+
+.shop-item{
+    border: 2px solid #317773 ;
+    border-radius: 25px 25px 0 0;
+    width: 80%;
+    margin-left: 20px;
+    display: grid;
+
+}
+
+.shop-item-tittle{
+    font-weight: 700;
+    margin-top: 0;
+    font-size: 1.1rem;
+}
+
+.shop-item-price{
+    font-size: 1.1rem;
+}
+
+.buttons-auto{
+    display: flex;
+    background-color: #317773;
+    justify-content: center;
+
+}
+
+.shop-item-image{
+    width: 100%;
+    height: 250px;
+    border-radius: 25px 25px 0 0;
+    border-bottom: 2px solid #317773;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+.shop-item-button{
+    padding: 7px;
+    border: 2px solid #E2D1F9;
+    background-color: #317773;
+    color: #E2D1F9;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 10px;
+    margin: 10px auto;
+}
+
+.product-details{
+    background-color: #E2D1F9;
+    line-height: 2rem;
+    margin-top: 0;
+}
+
+.product-container{
+    display: flex;
+
+}
+
+.shop-item-button:hover{
+    background-color: #E2D1F9;
+    border: 2px solid #317773;
+    color: #317773;
+}
+
+footer{
+    background-color: #317773;
+    height: 170px;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.footer-email{
+    padding: 7px;
+    width: 60%;
+    border-radius: 10px;
+    font-size: 1rem;
+    background-color: #E2D1F9;
+    border: 2px solid #317773;
+}
+
+.subscribe-button{
+    width: 30%;
+    padding: 5px;
+    background-color: #317773;
+    border: 2px solid #E2D1F9;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    color: #E2D1F9;
+    font-weight: 700;
+}
+
+.social{
+    color: #E2D1F9;
+    font-size: 35px;
+
+}
+
+.social-media{
+    display: flex;
+    justify-content: space-around;
+}
+
+.follow{
+    margin-bottom: 10px;
+}
+
+.sec-one,
+.sec-two,
+.sec-three,
+.sec-four{
+    color: #E2D1F9;
+}
