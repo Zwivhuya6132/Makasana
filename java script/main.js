@@ -45,8 +45,6 @@ closeMenu.addEventListener('click', function(e) {
 });
 
 
-
-
 // Update Total
 function updatetotal(){
     let cartContent = document.getElementsByClassName("cart-content")[0];
@@ -67,9 +65,73 @@ function updatetotal(){
     }
 }
 
-// Slide show Java Script
-let slideIndex = 0;
-showSlides();
+// // Slide show Java Script
+// let slideIndex = 0;
+// showSlides();
+
+// // Thumbnail image controls
+// function currentSlide(n) {
+//   showSlides(slideIndex = n);
+// }
+
+// function showSlides(n) {
+//   let i;
+//   let slides = document.getElementsByClassName("slides");
+//   let dots = document.getElementsByClassName("dot");
+//   if (n > slides.length) {slideIndex = 1}
+//   if (n < 1) {slideIndex = slides.length}
+//   for (i = 0; i < slides.length; i++) {
+//     slides[i].style.display = "none";
+//   }
+//   for (i = 0; i < dots.length; i++) {
+//     dots[i].className = dots[i].className.replace(" active", "");
+//   }
+//   slides[slideIndex-1].style.display = "block";
+//   dots[slideIndex-1].className += " active";
+// }
+
+// Make the slideshopw automatic 
+// function showSlides() {
+//     let i;
+//     let slides = document.getElementsByClassName("slides");
+//     let dots = document.getElementsByClassName("dot");
+
+//     for (i = 0; i < slides.length; i++) {
+//       slides[i].style.display = "none";
+//     }
+//     slideIndex++;
+//     if (slideIndex > slides.length) {slideIndex = 1}
+//     slides[slideIndex-1].style.display = "block";
+//     setTimeout(showSlides, 5000); // Change image every 2 seconds
+//   }
+
+//   showSlides(slideIndex);
+
+// Thumbnail image controls
+// function currentSlide(n) {
+//   showSlides(slideIndex = n);
+// }
+
+// function showSlides(n) {
+//   let i;
+//   let slides = document.getElementsByClassName("slides");
+//   let dots = document.getElementsByClassName("dot");
+//   if (n > slides.length) {slideIndex = 1}
+//   if (n < 1) {slideIndex = slides.length}
+//   for (i = 0; i < slides.length; i++) {
+//     slides[i].style.display = "none";
+//   }
+//   for (i = 0; i < dots.length; i++) {
+//     dots[i].className = dots[i].className.replace(" active", "");
+//   }
+//   slides[slideIndex - 1].style.display = "block";
+//   dots[slideIndex - 1].className += " active";
+// }
+
+let slideIndex = 1; // Initialize slideIndex to 1
+
+// Call the showSlides function when the page loads to display the initial slide.
+showSlides(slideIndex);
 
 // Thumbnail image controls
 function currentSlide(n) {
@@ -80,29 +142,78 @@ function showSlides(n) {
   let i;
   let slides = document.getElementsByClassName("slides");
   let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
+  if (n > slides.length) { slideIndex = 1; }
+  if (n < 1) { slideIndex = slides.length; }
+  
+  // Hide all slides
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
+  
+  // Remove the "active" class from all dots
   for (i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace(" active", "");
   }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
+  
+  // Display the current slide and set the corresponding dot as active
+  slides[slideIndex - 1].style.display = "block";
+  dots[slideIndex - 1].className += " active";
 }
 
-// Make the slideshopw automatic 
-function showSlides() {
-    let i;
-    let slides = document.getElementsByClassName("slides");
-    let dots = document.getElementsByClassName("dot");
+// Automatic slideshow
+let autoSlideIndex = 0; // Initialize autoSlideIndex to 0
 
-    for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-    }
-    slideIndex++;
-    if (slideIndex > slides.length) {slideIndex = 1}
-    slides[slideIndex-1].style.display = "block";
-    setTimeout(showSlides, 5000); // Change image every 2 seconds
+function autoShowSlides() {
+  let i;
+  let slides = document.getElementsByClassName("slides");
+  let dots = document.getElementsByClassName("dot");
+  
+  // Hide all slides
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
   }
+  
+  autoSlideIndex++;
+  
+  if (autoSlideIndex > slides.length) {
+    autoSlideIndex = 1;
+  }
+  
+  // Remove the "active" class from all dots
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  
+  // Display the current slide and set the corresponding dot as active
+  slides[autoSlideIndex - 1].style.display = "block";
+  dots[autoSlideIndex - 1].className += " active";
+  
+  // Change slide every 2 seconds (2000 milliseconds)
+  setTimeout(autoShowSlides, 2000);
+}
+
+// Call the autoShowSlides function to start the automatic slideshow
+autoShowSlides();
+
+let currentSlide = 1;
+const slides = document.querySelectorAll('.carousel-slide');
+
+function showSlide(n) {
+  if (n > slides.length) {
+    currentSlide = 1;
+  }
+  if (n < 1) {
+    currentSlide = slides.length;
+  }
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.transform = 'translateX(-' + (currentSlide - 1) * 100 + '%)';
+  }
+}
+
+function changeSlide(n) {
+  showSlide(currentSlide += n);
+}
+
+// Initialize the carousel with the first slide
+showSlide(currentSlide);
+

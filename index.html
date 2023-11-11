@@ -7,7 +7,8 @@
     <title>Home</title>
     <link rel="website icon" type="jpg" href="images/The-happy-store.jpg">
     <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/responsive.css">
+    <!-- <link rel="stylesheet" href="css/responsive.css">
+     -->
     <!-- link to fontawesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
@@ -19,7 +20,7 @@
 
     <header class="header">
         <!-- Logo container/Left Section -->
-        <div class="logo-container">f
+        <div class="logo-container">
             <img class="logo" src="images/The-happy-store.jpg" alt="logo">
             <h1 class="name">The Justified Crew</h1> 
         </div>
@@ -225,33 +226,61 @@
 
     <!--The following containers are for the slide show-->
     <section class="slideshow-sec">
-
         <div class="slides fade">
-            <img src="images/Rectangle 19.png" alt="" class="imgs">
+          <img src="images/Rectangle 19.png" alt="" class="imgs">
         </div>
-
         <div class="slides fade">
-            <img src="images/Product  3.png" alt="" class="imgs">
+          <img src="images/Product  3.png" alt="" class "imgs">
         </div>
-
-        <div class="slides fade">
-            <img src="images/Product  4.png" alt="" class="imgs">
-        </div>
-
-        <div class="slides fade">
-            <img src="images/Product 1.png" alt="" class="imgs">
-        </div>
-
-        <!-- The dots/circles -->
+        <!-- Add more slides as needed -->
         <div style="text-align:center">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
-            <span class="dot" onclick="currentSlide(4)"></span>
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <!-- Add more dots as needed -->
+        </div>
+      </section>
 
+      <h4>Shop By Category</h4>
+
+      
+      <div class="carousel-container">
+
+
+        <div class="carousel-slide">
+          <img src="images/Product  4.png" alt="Slide 1">
+        </div>
+        <div class="carousel-slide">
+          <img src="images/Product  3.png" alt="Slide 2">
+        </div>
+        
+        <div class="carousel-slide">
+            <img src="images/Product  4.png" alt="Slide 1">
+        </div>
+        <div class="carousel-slide">
+            <img src="images/Product  3.png" alt="Slide 2">
         </div>
 
-    </section>
+        <div class="carousel-slide">
+            <img src="images/Product  4.png" alt="Slide 1">
+        </div>
+        <div class="carousel-slide">
+          <img src="images/Product  3.png" alt="Slide 2">
+        </div>
+
+        <div class="carousel-slide">
+            <img src="images/Product  4.png" alt="Slide 1">
+        </div>
+        <div class="carousel-slide">
+          <img src="images/Product  3.png" alt="Slide 2">
+        </div>
+        
+        
+        <!-- Add more carousel slides as needed -->
+        <button class="prev-button" onclick="changeCarouselSlide(-1)">&#8249;</button>
+        <button class="next-button" onclick="changeCarouselSlide(1)">&#8250;</button>
+      </div>
+      
+      
 
 
 
@@ -995,7 +1024,7 @@
     </footer>
 
     
-    <script src="java script/main.js"></script>
+    <!-- <script src="java script/main.js"></script> -->
     <script src="java script/cart.js"></script>
     
 </body>
